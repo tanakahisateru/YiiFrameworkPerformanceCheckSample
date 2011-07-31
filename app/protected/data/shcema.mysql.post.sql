@@ -1,0 +1,8 @@
+CREATE TABLE tbl_post (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    text TEXT NULL,
+    created TIMESTAMP NULL,
+    modified TIMESTAMP NULL
+);
+
