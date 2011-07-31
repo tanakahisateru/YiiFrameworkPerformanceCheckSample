@@ -27,7 +27,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','simpleview'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -51,6 +51,18 @@ class PostController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	/**
+	 * Simplest single model view.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionSimpleView($id)
+	{
+	    $this->layout = '//layouts/simple';
+		$this->render('simpleview',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
