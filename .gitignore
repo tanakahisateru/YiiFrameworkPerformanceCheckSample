@@ -1,2 +1,7 @@
 framework/*
 app/protected/data/testdrive.db
+pinoco/_app/lib/Pinoco.php
+pinoco/_app/lib/Pinoco/*
+pinoco/_app/lib/PHPTAL.php
+pinoco/_app/lib/PHPTAL/*
+

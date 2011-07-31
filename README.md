@@ -4,6 +4,13 @@
 Put Yii framework core named as "framework" beside with app.
 You can get it from http://www.yiiframework.com/ .
 
+Pinoco view needs Pinoco-runtime and PHPTAL to be installed.
+
+* https://github.com/tanakahisateru/pinoco
+* http://phptal.org/
+
+Get releases and put them into `pinoco/_app/lib`.
+
 ## Permission
 ```
 chmod 777 app/assets

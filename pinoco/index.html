@@ -1,0 +1,11 @@
+<ul>
+  <li tal:repeat="post this/posts">
+    <strong tal:content="post/id">1</strong>
+    <span tal:content="post/name">post title</span>
+    <a href="html/_detail.html"
+        pal:attr="href url:/html/${post/id}">with TAL</a>
+    <a href="php/_detail.php"
+        pal:attr="href url:/php/${post/id}">without TAL</a>
+  </li>
+</ul>
+
