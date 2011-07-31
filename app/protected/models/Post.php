@@ -92,4 +92,16 @@ class Post extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Auto timestamp
+	 */
+	protected function beforeSave()
+	{
+		$ts = date('c');
+		if($this->isNewRecord)
+			$this->created = $ts;
+		$this->modified = $ts;
+		return true;
+	}
 }
